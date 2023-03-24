@@ -1,0 +1,316 @@
+body {
+    display: flex;
+    justify-content: center;
+}
+
+img {
+    width: 30px;
+    border-radius: 50%;
+}
+
+.contact-form {
+    background-color: #f2f2f2;
+    padding: 10px;
+    border-radius: 10px;
+    width: 600px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .contact-form label {
+    color: black;
+  }
+  
+  .contact-form .heading {
+    font-size: 18px;
+    color: black;
+    margin-bottom: 8px;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+  }
+  
+  .contact-form form {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start center;
+  }
+  
+  .contact-form label {
+    margin-bottom: 5px;
+  }
+
+/* Textarea*/
+  
+  #relatado {
+    resize: none;
+    height: 35px;
+    width: 505px;
+  }
+
+  #executado {
+    resize: none;
+    height: 90px;
+    width: 505px;
+  }
+
+  #solucao {
+    resize: none;
+    height: 35px;
+    width: 505px;
+    margin: 0;
+  }
+
+  .nome-e-loja {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    justify-items: center;
+
+  }
+
+  .nome-e-loja label {
+    display: block;
+  }
+
+  .container-premissas label {
+    display: block;
+  }
+
+  .container-premissas {
+    display: grid;
+    justify-content: space-around;
+    grid-template-columns: auto auto;
+    width: 516.45px;
+
+  }
+  
+  .contact-form input, .contact-form textarea {
+    padding: 5px;
+    border: 1px solid black;
+    border-radius: 2px;
+    margin-bottom: 15px;
+    box-shadow:  8px 8px 16px #bababa,
+    -8px -8px 16px #ffffff;
+  }
+  
+  .contact-form input:focus, .contact-form textarea:focus {
+    outline: none;
+    box-shadow: 0 0 5px #ff6384;
+    transform: scale(1.05);
+    transition: transform 0.3s ease-in-out;
+    border: 0.5px solid red;
+  }
+  
+  .contact-form button {
+    position: relative;
+    border: none;
+    background: transparent;
+    padding: 0;
+    cursor: pointer;
+    outline-offset: 4px;
+    transition: filter 250ms;
+    user-select: none;
+    touch-action: manipulation;
+  }
+
+  .shadow {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      border-radius: 12px;
+      background: hsl(0deg 0% 0% / 0.10);
+      will-change: transform;
+      transform: translateY(2px);
+      transition: transform 600ms cubic-bezier(.3, .7, .4, 1);
+  }
+
+  .edge {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      border-radius: 12px;
+      background: linear-gradient(
+          to left,
+          hsl(340deg 100% 16%) 0%,
+          hsl(340deg 100% 32%) 8%,
+          hsl(340deg 100% 32%) 92%,
+          hsl(340deg 100% 16%) 100%,
+      );
+  }
+
+  .front {
+      display: block;
+      position: relative;
+      padding: 12px 27px;
+      border-radius: 12px;
+      font-size: 1.1rem;
+      color: white;
+      background: hsl(345deg 100% 47%);
+      will-change: transform;
+      transform: translateY(-4px);
+      transition: transform 600ms cubic-bezier(.3, .7, .4, 1);
+  }
+
+  
+  
+  .contact-form button:hover {
+    filter: brightness(110%);
+  }
+
+  button:hover .front {
+      transform: translateY(-6px);
+      transition: transform 250ms cubic-bezier(.3, .7, .4, 1.5);
+  }
+
+  button:active .front {
+      transform: translateY(-2px);
+      transition: transform 34ms;
+  }
+
+  button:hover .shadow {
+    transform: translateY(4px);
+    transition: transform 250ms cubic-bezier(.3, .7, .4, 1.5);
+  }
+
+  button:active .shadow {
+    transform: translateY(1px);
+    transition: transform 34ms;
+}
+
+button:focus:not(:focus-visible) {
+    outline: none;
+}
+
+  /* editados */
+
+.premissas {
+    display: grid;
+    grid-template-columns: auto;
+    align-self: center;
+}
+
+fieldset {
+    text-align: center;
+    padding: 0;
+    margin: 10px;
+}
+
+
+  
+#urlCp {
+  text-align: center;
+}
+
+
+.message {
+  padding: 19px 60px;
+  position: fixed;
+  top: 20px;
+  right: 105px;
+  background-color: chocolate;
+  border-radius: 3px;
+  color: white;
+  box-shadow: 7px 13px 8px -7px #3e7327;
+	background:linear-gradient(to bottom, #77b55a 5%, #72b352 100%);
+	background-color:#77b55a;
+	border:2px solid #4b8f29;
+	display:inline-block;
+	cursor:pointer;
+	color:#ffffff;
+	font-family:Arial;
+	font-size:16px;
+	font-weight:bold;
+	padding:12px 15px;
+	text-decoration:none;
+  animation: slidein 0.2s cubic-bezier(0.25, 0.40, 0.45, 0.94) both;
+}
+
+
+
+@keyframes slidein{
+  0%{
+    transform: translateX(1000px);
+    opacity: 0;
+  }
+  100%{
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+.message::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 0;
+  height: 5px;
+  background-color: red;
+  border-radius: 2px;
+  animation: time 5s forwards;
+}
+
+@keyframes time {
+  0% {
+    width: 0;
+  }
+  100% {
+    width: 100%;
+  }
+}
+
+.container-geral {
+  display: grid;
+  grid-template-columns: 1fr 2fr 4fr;
+}
+
+.container-1 {
+  display: flex;
+  align-items: center;
+}
+
+.container-2{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.rapido {
+  background-color:#ff6384;
+  width: 100%;
+  height: 100%;
+}
+
+.rapido input {
+  display: block;
+  justify-content: center;
+}
+
+.preenchimentoRapido{
+  display: flex;
+  margin-top: 10px;
+}
+
+.container-email-e-horario label {
+  display: block;
+}
+
+.container-email-e-horario {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  justify-items: center;
+}
+
+.container-pai-apoio {
+  text-align: center;
+  margin-top: 10px;
+}
+
+.horario {
+  width: 50px;
+}

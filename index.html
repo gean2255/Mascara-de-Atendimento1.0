@@ -1,198 +1,213 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Mascara N1</title>
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
-
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
     <main>
+      <div class="alert"></div>
 
-        <div class="alert"></div>
+      <div class="container-geral">
+        <div class="container-1">
+          <fieldset>
+            <legend>Selecione o Tipo da Mascara</legend>
 
-        <div class="container-geral">
+            <input
+              type="radio"
+              id="mascaraN1"
+              name="mascara"
+              value="n1"
+              checked
+            />
+            <label for="mascaraN1">N1</label>
 
-            <div class="container-1">
-
-                <fieldset>
-        
-                    <legend>Selecione o Tipo da Mascara</legend>
-                    
-                    <input type="radio" id="mascaraN1" name="mascara" value="n1" checked>
-                    <label for="mascaraN1">N1</label>
-
-                    <input type="radio" id="mascaraN2" name="mascara" value="n2">
-                    <label for="mascaraN2">N2</label>
-    
-
-                </fieldset>
-
-            </div>
-
-            <div class="container-2">
-
-
-                <div class="rapido">
-
-                    <fieldset>
-        
-                        <legend>Preenchimento Rápido</legend>
-                        
-                        <div class="preenchimentoRapido">
-                            <input type="radio" id="none" name="preenchimentoRapido" value="" checked>
-                            <label for="none">None</label>
-                        </div>
-
-                        <div class="preenchimentoRapido">
-                            <input type="radio" id="erro31Pinpad" name="preenchimentoRapido" value="">
-                            <label for="erro31Pinpad">31 Pinpad(utilizado 622/ e Pinpad reconhecido</label>
-                        </div>
-
-                        <div class="preenchimentoRapido">
-                            <input type="radio" id="reprocessamento" name="preenchimentoRapido" value="">
-                            <label for="reprocessamento">Venda em contingencia Reprocessamento para Sefaz</label>
-                        </div>
-
-                        <div class="preenchimentoRapido">
-                            <input type="radio" id="wifiPdx" name="preenchimentoRapido" value="">
-                            <label for="wifiPdx">PDX Solicita Senha para conectar no wifi Bot Mobshop</label>
-                        </div>
-        
-
-                    </fieldset>
-
-                </div>
-
-            </div>
-
-            <div class="container-3">
-
-                <div class="contact-form">
-
-                    <span class="heading"><img src="./Logo.jpg" alt=""> Mascara de Atendimento N1</span>
-
-                    <form id="container-form">
-        
-                        <div class="nome-e-loja">
-        
-                            <div>
-                                <label for="nome">Nome:</label>
-                                <input type="text" id="nome" name="nome">
-                            </div>
-
-                            <div>
-                                <label for="loja">Codigo da Loja:</label>
-                                <input type="text" id="loja" name="loja">
-                            </div>
-        
-                        </div>
-        
-                    <label for="relatado">Problema Relatado:</label>
-                    <textarea id="relatado" name="relatado"></textarea>
-        
-                    <label for="executado">Procedimento Executado:</label>
-                    <textarea id="executado" name="executado"></textarea>
-        
-                    <label class="labelSolucao" for="solucao">Solução do caso:</label>
-                    <textarea id="solucao" name="solucao"></textarea>
-
-                    <div class="container-pai-apoio">
-
-
-                        
-                    </div>
-
-        
-                    <div class="premissas">
-        
-                        <div>
-                            
-                            <fieldset>
-        
-                                <legend>Selecione se Tem Evidencias</legend>
-                                
-                                <input type="radio" id="naotem" name="Evidencias" value="Não tem" checked>
-                                <label for="naotem">Não tem</label>
-        
-                                <input type="radio" id="tem" name="Evidencias" value="Em Anexo">
-                                <label for="tem">Em Anexo</label>
-                
-        
-                            </fieldset>
-        
-                            
-                            
-                        </div>
-                        
-                        <div class="container-premissas">
-
-                            <div>
-                                <div>
-                                    <label for="Artigo">Artigo:</label>
-                                    <input type="text" id="Artigo" name="Artigo">
-                                </div>
-                                
-                                <p id="urlCp" for="">cp.varejofacil.com</p>
-                            </div>
-
-                            <div>
-
-                                <div>
-                                    <label for="CP">CP:</label>
-                                    <input type="text" maxlength="10" id="CP" name="CP">
-                                </div>
-
-                                <div>
-                                    <label for="Contato">Contato:</label>
-                                    <input type="" id="Contato" name="Contato">
-                                </div>
-    
-                            </div>
-
-                        </div>
-
-                        <div class="container-email-e-horario">
-
-                            <div>
-                                <label for="email">Email:</label>
-                                <input type="text" id="email" name="email">
-                            </div>
-
-                            <div>
-                                <label for="horario">Horario: Seg a Sexta | Sab | Dom:</label>
-                                <input class="horario" type="" id="horarioSegSex" name="horario" value="8h - 18h">
-                                <input class="horario" type="" id="horarioSab" name="horario" value="8h - 13h">
-                                <input class="horario" type="" id="horarioDom" name="horario" value="xxxxx">
-                            </div>
-
-                        </div>
-        
-        
-        
-        
-                    </div>
-        
-                    <button class="copiar" onclick="copiarMask()">
-                        <span class="shadow"></span>
-                        <span class="edge"></span>
-                        <span class="front text"> Copiar</span>
-                    </button>
-        
-        
-                    </form>
-                </div>
-                
-
-            </div>
-
+            <input type="radio" id="mascaraN2" name="mascara" value="n2" />
+            <label for="mascaraN2">N2</label>
+          </fieldset>
         </div>
 
-        
-    
-    <script src="script.js"></script>
+        <div class="container-2">
+          <div class="rapido">
+            <fieldset>
+              <legend>Preenchimento Rápido</legend>
+
+              <div class="preenchimentoRapido">
+                <input
+                  type="radio"
+                  id="none"
+                  name="preenchimentoRapido"
+                  value=""
+                  checked
+                />
+                <label for="none">None</label>
+              </div>
+
+              <div class="preenchimentoRapido">
+                <input
+                  type="radio"
+                  id="erro31Pinpad"
+                  name="preenchimentoRapido"
+                  value=""
+                />
+                <label for="erro31Pinpad"
+                  >31 Pinpad(utilizado 622/ e Pinpad reconhecido</label
+                >
+              </div>
+
+              <div class="preenchimentoRapido">
+                <input
+                  type="radio"
+                  id="reprocessamento"
+                  name="preenchimentoRapido"
+                  value=""
+                />
+                <label for="reprocessamento"
+                  >Venda em contingencia Reprocessamento para Sefaz</label
+                >
+              </div>
+
+              <div class="preenchimentoRapido">
+                <input
+                  type="radio"
+                  id="wifiPdx"
+                  name="preenchimentoRapido"
+                  value=""
+                />
+                <label for="wifiPdx"
+                  >PDX Solicita Senha para conectar no wifi Bot Mobshop</label
+                >
+              </div>
+            </fieldset>
+          </div>
+        </div>
+
+        <div class="container-3">
+          <div class="contact-form">
+            <span class="heading"
+              ><img src="./Logo.jpg" alt="" /> Mascara de Atendimento N1</span
+            >
+
+            <form id="container-form">
+              <div class="nome-e-loja">
+                <div>
+                  <label for="nome">Nome:</label>
+                  <input type="text" id="nome" name="nome" />
+                </div>
+
+                <div>
+                  <label for="loja">Codigo da Loja:</label>
+                  <input type="text" id="loja" name="loja" />
+                </div>
+              </div>
+
+              <label for="relatado">Problema Relatado:</label>
+              <textarea id="relatado" name="relatado"></textarea>
+
+              <label for="executado">Procedimento Executado:</label>
+              <textarea id="executado" name="executado"></textarea>
+
+              <label class="labelSolucao" for="solucao">Solução do caso:</label>
+              <textarea id="solucao" name="solucao"></textarea>
+
+              <div class="container-pai-apoio"></div>
+
+              <div class="premissas">
+                <div>
+                  <fieldset>
+                    <legend>Selecione se Tem Evidencias</legend>
+
+                    <input
+                      type="radio"
+                      id="naotem"
+                      name="Evidencias"
+                      value="Não tem"
+                      checked
+                    />
+                    <label for="naotem">Não tem</label>
+
+                    <input
+                      type="radio"
+                      id="tem"
+                      name="Evidencias"
+                      value="Em Anexo"
+                    />
+                    <label for="tem">Em Anexo</label>
+                  </fieldset>
+                </div>
+
+                <div class="container-premissas">
+                  <div>
+                    <div>
+                      <label for="Artigo">Artigo:</label>
+                      <input type="text" id="Artigo" name="Artigo" />
+                    </div>
+
+                    <p id="urlCp" for="">cp.varejofacil.com</p>
+                  </div>
+
+                  <div>
+                    <div>
+                      <label for="CP">CP:</label>
+                      <input type="text" maxlength="10" id="CP" name="CP" />
+                    </div>
+
+                    <div>
+                      <label for="Contato">Contato:</label>
+                      <input type="" id="Contato" name="Contato" />
+                    </div>
+                  </div>
+                </div>
+
+                <div class="container-email-e-horario">
+                  <div>
+                    <label for="email">Email:</label>
+                    <input type="text" id="email" name="email" />
+                  </div>
+
+                  <div>
+                    <label for="horario"
+                      >Horario: Seg a Sexta | Sab | Dom:</label
+                    >
+                    <input
+                      class="horario"
+                      type=""
+                      id="horarioSegSex"
+                      name="horario"
+                      value="8h - 18h"
+                    />
+                    <input
+                      class="horario"
+                      type=""
+                      id="horarioSab"
+                      name="horario"
+                      value="8h - 13h"
+                    />
+                    <input
+                      class="horario"
+                      type=""
+                      id="horarioDom"
+                      name="horario"
+                      value="xxxxx"
+                    />
+                  </div>
+                </div>
+              </div>
+
+              <button class="copiar" onclick="copiarMask()">
+                <span class="shadow"></span>
+                <span class="edge"></span>
+                <span class="front text"> Copiar</span>
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
+
+      <script src="script.js"></script>
     </main>
-</body>
+  </body>
 </html>

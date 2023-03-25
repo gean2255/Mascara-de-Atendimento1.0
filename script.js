@@ -42,9 +42,21 @@ const horarioSegSexta = document.getElementById("horarioSegSex")
 const horarioSab = document.getElementById("horarioSab")
 const horarioDom = document.getElementById("horarioDom")
 
+// Prrenchimento rapido
 const wifiPdx = document.getElementById("wifiPdx")
 const none = document.getElementById("none")
 const reprocessamento = document.getElementById("reprocessamento")
+const satDocPorta = document.getElementById("satDocPorta")
+
+const container4 = document.querySelector(".container-4")
+
+const tituloTag = document.createElement("p")
+const nomeTag = document.createElement("p")
+const tituloCategorizacao = document.createElement("p")
+const olCategorizacao = document.createElement("ol")
+const li1 = document.createElement("li")
+const li2 = document.createElement("li")
+const li3 = document.createElement("li")
 
 mascaraN1.addEventListener("change", () => {
   if (mascaraN1.checked) {
@@ -96,6 +108,10 @@ none.addEventListener("change", () => {
     executado.value = ""
     solucao.value = ""
     artigo.value = ""
+    container4.removeChild(tituloTag)
+    container4.removeChild(nomeTag)
+    container4.removeChild(tituloCategorizacao)
+    container4.removeChild(olCategorizacao)
   }
 })
 
@@ -107,7 +123,29 @@ erroPinpad31One.addEventListener("change", () => {
       "Acessado o PDV da loja e utilizado o comando 622/ para ver se o Pinpad estava comunicando com o PDV. \n\nRetornado que tinha um pinpad comunicando com o PDV então foi utilizado o comando 101/ para reiniciar o PDV.\n\nSolicitado para que seja feito um teste e o Pinpad agora está funcionando normalmente."
     solucao.value =
       "Utilizado o comando 622/ para verificar se o Pinpad estava comunicando, como estava, utilizado o comando 101/ para reiniciar o PDV, Feito um teste, Pinpad agora funcionando normalmente."
-    artigo.value = "8058"
+    artigo.value = "000008058"
+
+    container4.appendChild(tituloTag)
+    container4.appendChild(nomeTag)
+    container4.appendChild(tituloCategorizacao)
+    container4.appendChild(olCategorizacao)
+
+    olCategorizacao.classList.add("ol-categorizacao")
+
+    const listaOrdenadaCategorizacao =
+      document.querySelector(".ol-categorizacao")
+
+    listaOrdenadaCategorizacao.appendChild(li1)
+    li1.textContent = "Venda"
+    listaOrdenadaCategorizacao.appendChild(li2)
+    li2.textContent = "Realizar Pagamento"
+    listaOrdenadaCategorizacao.appendChild(li3)
+    li3.textContent =
+      "A Segunda parte, O Formulario do Caso Preencher conforme situação do caso!"
+
+    tituloTag.textContent = "Utilizar a Tag:"
+    nomeTag.textContent = "CM_Venda_Realizar Pagamento_Pinpad"
+    tituloCategorizacao.textContent = "Categorização"
   }
 })
 
@@ -119,7 +157,29 @@ wifiPdx.addEventListener("change", () => {
       "Em Contato com a Franqueada Informado o seguinte passo a passo : Acessar o App Hub na tela inicial, Seleciona a opção : Este Dispositivo > Perfis e clicar em reaplicar perfil.\n\nApós procedimento o Mobshop foi conectado a rede e está funcionando perfeitamente."
     solucao.value =
       "Em Contato com a Franqueada Informado o seguinte passo a passo : Acessar o App Hub na tela inicial, Seleciona a opção : Este Dispositivo > Perfis e clicar em reaplicar perfil."
-    artigo.value = "2955 tópico 4.2"
+    artigo.value = "000002955 tópico 4.2"
+
+    container4.appendChild(tituloTag)
+    container4.appendChild(nomeTag)
+    container4.appendChild(tituloCategorizacao)
+    container4.appendChild(olCategorizacao)
+
+    olCategorizacao.classList.add("ol-categorizacao")
+
+    const listaOrdenadaCategorizacao =
+      document.querySelector(".ol-categorizacao")
+
+    listaOrdenadaCategorizacao.appendChild(li1)
+    li1.textContent = "Venda"
+    listaOrdenadaCategorizacao.appendChild(li2)
+    li2.textContent = "Inicializar sistemas e dispositivos"
+    listaOrdenadaCategorizacao.appendChild(li3)
+    li3.textContent =
+      "A Segunda parte, O Formulario do Caso Preencher conforme situação do caso!"
+
+    tituloTag.textContent = "Utilizar a Tag:"
+    nomeTag.textContent = "CM_Venda_Sistemas_PDx_Bug"
+    tituloCategorizacao.textContent = "Categorização"
   }
 })
 
@@ -128,12 +188,70 @@ reprocessamento.addEventListener("change", () => {
     relatado.value =
       "Franqueada(o) informa que tem algumas vendas em contingencia e gostaria que fosse corrigido/reenviado."
     executado.value =
-      "Acessado o PDV da loja, Aberto o SysPDV Server, Acessado a Rotina : Comunicação PDV > Monitoramento NFCe, Consultado pelo periodo informado pela franqueada.\n\nSelecionado os cupons pendentes e reenviados com sucesso."
+      "Acessado o PDV da loja, Aberto o SysPDV Server, Acessado a Rotina : Comunicação PDV > Monitoramento NFCe, Consultado pelo periodo informado pela franqueada.\n\nSelecionado os cupons pendentes e reenviados, Cupons reenviados com sucesso."
     solucao.value =
       "Acessado o SysPDV Server na rotina de Comunicaçao PDV > Monitoramento NFCe, consultado e reenviado os cupons pendentes"
-    artigo.value = "8754"
+    artigo.value = "000008754"
+
+    container4.appendChild(tituloTag)
+    container4.appendChild(nomeTag)
+    container4.appendChild(tituloCategorizacao)
+    container4.appendChild(olCategorizacao)
+
+    olCategorizacao.classList.add("ol-categorizacao")
+
+    const listaOrdenadaCategorizacao =
+      document.querySelector(".ol-categorizacao")
+
+    listaOrdenadaCategorizacao.appendChild(li1)
+    li1.textContent = "Fiscal"
+    listaOrdenadaCategorizacao.appendChild(li2)
+    li2.textContent = "Exportação de XML"
+    listaOrdenadaCategorizacao.appendChild(li3)
+    li3.textContent =
+      "A Segunda parte, O Formulario do Caso Preencher conforme situação do caso!"
+
+    tituloTag.textContent = "Utilizar a Tag:"
+    nomeTag.textContent = "CM_Fiscal_ExportaçãoXML_Pendências"
+    tituloCategorizacao.textContent = "Categorização"
   }
 })
+
+satDocPorta.addEventListener("change", () => {
+  if (satDocPorta.checked) {
+    relatado.value =
+      "Franqueada(o) informa que ao tentar efetuar uma venda no PDV quando estava finalizando apresentou erro,  Aparecendo apenas as opções 'Tentar Reenviar novamente' e 'Cancelar este Cupom'."
+    executado.value =
+      "Acessado o PDV da loja, constatado que o erro mencionado é o ' Documento não Autenticado ', Clicado em Tentar reenviar novamente mas o erro ainda persiste.\n\nNa Área de trabalho do PDV aberto o programa 'Bematech Activation Software' e indo em Menu > Consultas > Clicado em Consulta SAT, Foi retornado a MSG : Erro na abertura da porta de comunicação SAT,\n\nNa Sequencia foi acessado a pasta C:>ProgramFiles>Bematech>ActivationSoftwarePackage>ActivationSoftware, Copiado os arquivos BemaSat.dll e BEMASAT.XML, Com os arquivos copiados acessado a pasta C:>SyspdvCFE>bematech>RB1000 ou (RB2000), depedendo do modelo do sat, excluido o arquivo .sat atual na pasta e colado os arquivos, Na Sequencia renomeado o arquivo BemaSat.dll para Sat.dll\n\nNa Sequencia Recortado o Arquivo BEMASAT.XML que foi colado, e indo na pasta C:>Syspdv, colado na pasta Raiz, Foi solicitado para que fosse feito um teste e a venda com efetivada com sucesso e cupom impresso.\n\n"
+    solucao.value =
+      "Efetuado a substituição dos arquivos sat.dll e bemasat.xml o SAT voltou a funcionar e o cupom foi emitido com sucesso."
+    artigo.value = "000008127"
+
+    container4.appendChild(tituloTag)
+    container4.appendChild(nomeTag)
+    container4.appendChild(tituloCategorizacao)
+    container4.appendChild(olCategorizacao)
+
+    olCategorizacao.classList.add("ol-categorizacao")
+
+    const listaOrdenadaCategorizacao =
+      document.querySelector(".ol-categorizacao")
+
+    listaOrdenadaCategorizacao.appendChild(li1)
+    li1.textContent = "Venda"
+    listaOrdenadaCategorizacao.appendChild(li2)
+    li2.textContent = "Inicializar sistemas e dispositivos"
+    listaOrdenadaCategorizacao.appendChild(li3)
+    li3.textContent =
+      "A Segunda parte, O Formulario do Caso Preencher conforme situação do caso!"
+
+    tituloTag.textContent = "Utilizar a Tag:"
+    nomeTag.textContent = "CM_Venda_Sistemas_S@T/MFE"
+    tituloCategorizacao.textContent = "Categorização"
+  }
+})
+
+//Copiar
 
 const copiarMask = () => {
   if (naotem.checked) {

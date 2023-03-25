@@ -258,7 +258,7 @@ fieldset {
 
 .container-geral {
   display: grid;
-  grid-template-columns: 1fr 2fr 4fr;
+  grid-template-columns: 1fr 2fr 4fr 2fr;
 }
 
 .container-1 {

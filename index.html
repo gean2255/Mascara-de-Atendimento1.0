@@ -89,10 +89,67 @@
                   name="preenchimentoRapido"
                   value=""
                 />
-                <label for="satDocPorta"
-                  >Erro Documento não autenticado, Problema na abertura da porta
-                  de comunicação com SAT</label
-                >
+                <label for="satDocPorta">Documento não Autenticado, SAT</label>
+              </div>
+
+              <div class="preenchimentoRapido">
+                <input
+                  type="radio"
+                  id="pagTefTravado"
+                  name="preenchimentoRapido"
+                  value=""
+                />
+                <label for="pagTefTravado">PDV Sem Responder Venda TEF</label>
+              </div>
+
+              <div class="preenchimentoRapido">
+                <input
+                  type="radio"
+                  id="prodForaDeLinha"
+                  name="preenchimentoRapido"
+                  value=""
+                />
+                <label for="prodForaDeLinha">Erro: Produto Fora de linha</label>
+              </div>
+
+              <div class="preenchimentoRapido">
+                <input
+                  type="radio"
+                  id="prodPrecoZero"
+                  name="preenchimentoRapido"
+                  value=""
+                />
+                <label for="prodPrecoZero">Erro: Produto Preco Zero</label>
+              </div>
+
+              <div class="preenchimentoRapido">
+                <input
+                  type="radio"
+                  id="pedidoOmniNDesce"
+                  name="preenchimentoRapido"
+                  value=""
+                />
+                <label for="pedidoOmniNDesce">Pedido Omni não Desceu</label>
+              </div>
+
+              <div class="preenchimentoRapido">
+                <input
+                  type="radio"
+                  id="lojaOffline"
+                  name="preenchimentoRapido"
+                  value=""
+                />
+                <label for="lojaOffline">Loja OFFLINE</label>
+              </div>
+
+              <div class="preenchimentoRapido">
+                <input
+                  type="radio"
+                  id="haqImpressao"
+                  name="preenchimentoRapido"
+                  value=""
+                />
+                <label for="haqImpressao">HAQ erro de impressão PDX</label>
               </div>
             </fieldset>
           </div>
@@ -177,13 +234,13 @@
 
                 <div class="container-email-e-horario">
                   <div>
-                    <label for="email">Email:</label>
+                    <label for="email">E-mail:</label>
                     <input type="text" id="email" name="email" />
                   </div>
 
                   <div>
                     <label for="horario"
-                      >Horario: Seg a Sexta | Sab | Dom:</label
+                      >Horário: Seg a Sexta | Sab | Dom:</label
                     >
                     <input
                       class="horario"

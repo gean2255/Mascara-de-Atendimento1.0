@@ -47,6 +47,11 @@ const wifiPdx = document.getElementById("wifiPdx")
 const none = document.getElementById("none")
 const reprocessamento = document.getElementById("reprocessamento")
 const satDocPorta = document.getElementById("satDocPorta")
+const pagTefTravado = document.getElementById("pagTefTravado")
+const prodForaDeLinha = document.getElementById("prodForaDeLinha")
+const pedidoOmniNDesce = document.getElementById("pedidoOmniNDesce")
+const lojaOffline = document.getElementById("lojaOffline")
+const haqImpressao = document.getElementById("haqImpressao")
 
 const container4 = document.querySelector(".container-4")
 
@@ -141,11 +146,11 @@ erroPinpad31One.addEventListener("change", () => {
     li2.textContent = "Realizar Pagamento"
     listaOrdenadaCategorizacao.appendChild(li3)
     li3.textContent =
-      "A Segunda parte, O Formulario do Caso Preencher conforme situação do caso!"
+      "A Segunda parte do Formulario, O Formulario do Caso, Preencher conforme o problema em questão!"
 
     tituloTag.textContent = "Utilizar a Tag:"
     nomeTag.textContent = "CM_Venda_Realizar Pagamento_Pinpad"
-    tituloCategorizacao.textContent = "Categorização"
+    tituloCategorizacao.textContent = "Categorização:"
   }
 })
 
@@ -175,13 +180,22 @@ wifiPdx.addEventListener("change", () => {
     li2.textContent = "Inicializar sistemas e dispositivos"
     listaOrdenadaCategorizacao.appendChild(li3)
     li3.textContent =
-      "A Segunda parte, O Formulario do Caso Preencher conforme situação do caso!"
+      "A Segunda parte do Formulario, O Formulario do Caso, Preencher conforme o problema em questão!"
 
     tituloTag.textContent = "Utilizar a Tag:"
     nomeTag.textContent = "CM_Venda_Sistemas_PDx_Bug"
-    tituloCategorizacao.textContent = "Categorização"
+    tituloCategorizacao.textContent = "Categorização:"
   }
 })
+
+tituloTag.style.backgroundColor = "orange"
+tituloTag.style.borderRadius = "3px"
+nomeTag.style.border = "3px solid black"
+tituloCategorizacao.style.backgroundColor = "orange"
+tituloCategorizacao.style.borderRadius = "3px"
+olCategorizacao.style.border = "3px solid black"
+li2.style.marginTop = "10px"
+li3.style.marginTop = "10px"
 
 reprocessamento.addEventListener("change", () => {
   if (reprocessamento.checked) {
@@ -209,11 +223,12 @@ reprocessamento.addEventListener("change", () => {
     li2.textContent = "Exportação de XML"
     listaOrdenadaCategorizacao.appendChild(li3)
     li3.textContent =
-      "A Segunda parte, O Formulario do Caso Preencher conforme situação do caso!"
+      "A Segunda parte do Formulario, O Formulario do Caso, Preencher conforme o problema em questão!"
 
     tituloTag.textContent = "Utilizar a Tag:"
-    nomeTag.textContent = "CM_Fiscal_ExportaçãoXML_Pendências"
-    tituloCategorizacao.textContent = "Categorização"
+    nomeTag.textContent = `CM_Fiscal_ExportaçãoXML
+    _Pendências`
+    tituloCategorizacao.textContent = "Categorização:"
   }
 })
 
@@ -243,11 +258,236 @@ satDocPorta.addEventListener("change", () => {
     li2.textContent = "Inicializar sistemas e dispositivos"
     listaOrdenadaCategorizacao.appendChild(li3)
     li3.textContent =
-      "A Segunda parte, O Formulario do Caso Preencher conforme situação do caso!"
+      "A Segunda parte do Formulario, O Formulario do Caso, Preencher conforme o problema em questão!."
 
     tituloTag.textContent = "Utilizar a Tag:"
     nomeTag.textContent = "CM_Venda_Sistemas_S@T/MFE"
-    tituloCategorizacao.textContent = "Categorização"
+    tituloCategorizacao.textContent = "Categorização:"
+  }
+})
+
+pagTefTravado.addEventListener("change", () => {
+  if (pagTefTravado.checked) {
+    relatado.value =
+      "Franqueada(o) informa que seu PDV travou no momento da autorização do pagamento na forma de pagamento TEF."
+
+    executado.value = `Acessado o PDV da loja, constatado que o PDV estava travado na tela de processamento de pagamento Com a tela branca sem responder.
+
+Aberto o CMD e utilizado o comando 'taskmgr' para abrir o Gerenciador de Tarefas, Localizado o processo Syspdv_PDV e finalizado para que o PDV seja fechado.
+
+Na sequência solicitado para que realize uma consulta no SITEF para verificar o status do pagamento que estava sendo processado para saber se estava pendente ou aprovado.
+
+Verificado que estava pendente, foi então realizado a confirmação da transação no SITEF, Foi aberto o PDV novamente e observado que voltou para a tela da venda em questão na Etapa de finalização da venda, Orientado a Franqueada para que finalize a venda na forma de pagamento POS Credito/Debito para evitar duplicidade na transação e o valor entrar corretamente no seu caixa.`
+
+    solucao.value = `Fechado o PDV pelo Gerenciador de Tarefas e conferido a venda no SITEF, como estava pendente foi confirmado a venda e lançada no PDV como POS.`
+
+    artigo.value = "Não Encontrado"
+
+    container4.appendChild(tituloTag)
+    container4.appendChild(nomeTag)
+    container4.appendChild(tituloCategorizacao)
+    container4.appendChild(olCategorizacao)
+
+    olCategorizacao.classList.add("ol-categorizacao")
+
+    const listaOrdenadaCategorizacao =
+      document.querySelector(".ol-categorizacao")
+
+    listaOrdenadaCategorizacao.appendChild(li1)
+    li1.textContent = "Venda"
+    listaOrdenadaCategorizacao.appendChild(li2)
+    li2.textContent = "Realizar Pagamento"
+    listaOrdenadaCategorizacao.appendChild(li3)
+    li3.textContent =
+      "A Segunda parte do Formulario, O Formulario do Caso, Preencher conforme o problema em questão!."
+
+    tituloTag.textContent = "Utilizar a Tag:"
+    nomeTag.textContent = "CM_Venda_Realizar Pagamento_PDV_Bug"
+    tituloCategorizacao.textContent = "Categorização:"
+  }
+})
+
+prodForaDeLinha.addEventListener("change", () => {
+  if (prodForaDeLinha.checked) {
+    relatado.value = `Franqueada(o) informa que ao tentar Lançar o Produto X no PDV apresenta o erro : "Produto fora de linha"`
+
+    executado.value = `Primeiramente consultado o produto no Presto e na Bíblia do consumidor para verificar se o produto está no Ciclo Vigente, Na sequencia acessado o CP da loja, Indo na rotina: Produto > Cadastro > Produto, Consultado o produto em questão, Indo na Aba 'Informações, Em Opções Desmarcado o Checkbox "Fora de linha".
+
+Na Sequencia acessado a Rotina : Frente de loja > Sincronização > Loja, Selecionado a loja em questão e enviado uma carga de Produtos, Após a sincronização ter finalizado utilizado a função 101/ para reiniciar o PDV e em seguida efetuado um teste e o produto foi incluso com sucesso para venda.`
+
+    solucao.value = `Acessado o Cadastro do produto, na Aba Informações Desmarcado o Checkbox "Fora de linha", Efetuado uma sincronização com o PDV e agora é possível incluir o produto para venda com sucesso no PDV.`
+
+    artigo.value = "000008643"
+
+    container4.appendChild(tituloTag)
+    container4.appendChild(nomeTag)
+    container4.appendChild(tituloCategorizacao)
+    container4.appendChild(olCategorizacao)
+
+    olCategorizacao.classList.add("ol-categorizacao")
+
+    const listaOrdenadaCategorizacao =
+      document.querySelector(".ol-categorizacao")
+
+    listaOrdenadaCategorizacao.appendChild(li1)
+    li1.textContent = "Venda"
+    listaOrdenadaCategorizacao.appendChild(li2)
+    li2.textContent = "Incluir Produto"
+    listaOrdenadaCategorizacao.appendChild(li3)
+    li3.textContent =
+      "A Segunda parte do Formulario, O Formulario do Caso, Preencher conforme o problema em questão!."
+
+    tituloTag.textContent = "Utilizar a Tag:"
+    nomeTag.textContent = "CM_Venda_Incluir Produto_Produto_Fora de Linha"
+    tituloCategorizacao.textContent = "Categorização:"
+  }
+})
+
+prodPrecoZero.addEventListener("change", () => {
+  if (prodPrecoZero.checked) {
+    relatado.value = `Franqueada informa que ao tentar incluir Produto X está apresentando o Erro: Preço com preço zero.`
+
+    executado.value = `Primeiramente consultado o produto em questão no presto e na Bíblia para saber se o produto está Vigente no Ciclo.
+
+Na sequência acessado o CP da loja, Indo na Rotina: Produto > Cadastro > Produto, Consultado o produto em Questão e indo na Aba Preço verificado que o preço consta normalmente no produto, Indo na Aba Imposto verificado que todos os campos estão devidamente preenchidos, Clicado então em Gravar para gerar uma pendencia do item na sincronização.
+
+Acessado a Rotina: Frente de loja > Sincronização > Loja, Selecionado a loja em questão e efetuado uma Carga de Produto Marcando também a Caixinha de 'Enviar Carga aos PDVs', Após finalizar a sincronização, efetuado um teste no PDV e agora o produto consta normalmente.`
+
+    solucao.value = `Verificado o cadastro do produto no CP da loja para saber se não faltava alguma informação, Gravado o cadastro e efetuado uma carga para o PDV, Após procedimento problema resolvido.`
+
+    artigo.value = "000008643"
+
+    container4.appendChild(tituloTag)
+    container4.appendChild(nomeTag)
+    container4.appendChild(tituloCategorizacao)
+    container4.appendChild(olCategorizacao)
+
+    olCategorizacao.classList.add("ol-categorizacao")
+
+    const listaOrdenadaCategorizacao =
+      document.querySelector(".ol-categorizacao")
+
+    listaOrdenadaCategorizacao.appendChild(li1)
+    li1.textContent = "Venda"
+    listaOrdenadaCategorizacao.appendChild(li2)
+    li2.textContent = "Incluir Produto"
+    listaOrdenadaCategorizacao.appendChild(li3)
+    li3.textContent =
+      "A Segunda parte do Formulario, O Formulario do Caso, Preencher conforme o problema em questão!."
+
+    tituloTag.textContent = "Utilizar a Tag:"
+    nomeTag.textContent = "CM_Venda_Incluir Produto_Produto_Webclient"
+    tituloCategorizacao.textContent = "Categorização:"
+  }
+})
+
+pedidoOmniNDesce.addEventListener("change", () => {
+  if (pedidoOmniNDesce.checked) {
+    relatado.value = `Franqueada(o) informa que pedido Omni não está aparecendo no PDV.`
+
+    executado.value = `Acessado PDV da loja, Solicitado para mostrar o pedido no Instore para verificar o seu status, constatado que ele está como Enviado para o PDV mas mesmo assim não está aparecendo.
+
+Acessado o CP da loja e indo na Rotina: Venda > Vendas Externas > Monitoramento de pedido, Consultando o pedido e verificado que consta normalmente no Varejofácil.
+
+No PDV aberto o CMD e com o comando 'services.msc' para abrir os Serviços, Localizado o Serviço SysPdv Service e Clicado para parar o serviço, aguardado alguns segundos e Iniciado novamente, Feito o procedimento depois de um tempinho o Pedido Desceu para o PDV`
+
+    solucao.value = `Acessado o PDV da loja, Reiniciado o Serviço: SysPdv Service, Feito o procedimento depois de um tempinho o Pedido desceu para o PDV.`
+
+    artigo.value = "Não Encontrado"
+
+    container4.appendChild(tituloTag)
+    container4.appendChild(nomeTag)
+    container4.appendChild(tituloCategorizacao)
+    container4.appendChild(olCategorizacao)
+
+    olCategorizacao.classList.add("ol-categorizacao")
+
+    const listaOrdenadaCategorizacao =
+      document.querySelector(".ol-categorizacao")
+
+    listaOrdenadaCategorizacao.appendChild(li1)
+    li1.textContent = "Venda"
+    listaOrdenadaCategorizacao.appendChild(li2)
+    li2.textContent = "Resgatar pedido Omni"
+    listaOrdenadaCategorizacao.appendChild(li3)
+    li3.textContent =
+      "A Segunda parte do Formulario, O Formulario do Caso, Preencher conforme o problema em questão!."
+
+    tituloTag.textContent = "Utilizar a Tag:"
+    nomeTag.textContent = "CM_Venda_Omni_Config_PDV"
+    tituloCategorizacao.textContent = "Categorização:"
+  }
+})
+
+lojaOffline.addEventListener("change", () => {
+  if (lojaOffline.checked) {
+    relatado.value = `Franqueada informa que as informações do seu caixa e vendas não estão aparecendo nada no Varejofácil.`
+
+    executado.value = `Acessado o CP da loja, Indo na rotina: Frente de loja > Sincronização > Lojas, Constatado que a loja se encontra OFFLINE.
+
+Acessado o PDV da loja, Aberto o CMD e Utilizado o comando 'services.msc' para abrir os serviços, Localizado o Serviço 'SysPDV WebClient' parado o serviço e iniciado novamente, Após alguns segundos a Loja voltou a ficar online e todas informações que estava pendente subiu para o Varejofácil.`
+
+    solucao.value = `Acessado o PDV da loja, Reiniciado o serviço SysPDV WebCliente, Após alguns segundos Verificado que todas informações pendentes subiram para o Varejofácil.`
+
+    artigo.value = "Não Encontrado"
+
+    container4.appendChild(tituloTag)
+    container4.appendChild(nomeTag)
+    container4.appendChild(tituloCategorizacao)
+    container4.appendChild(olCategorizacao)
+
+    olCategorizacao.classList.add("ol-categorizacao")
+
+    const listaOrdenadaCategorizacao =
+      document.querySelector(".ol-categorizacao")
+
+    listaOrdenadaCategorizacao.appendChild(li1)
+    li1.textContent = "Venda"
+    listaOrdenadaCategorizacao.appendChild(li2)
+    li2.textContent = "Consultar relatórios"
+    listaOrdenadaCategorizacao.appendChild(li3)
+    li3.textContent =
+      "A Segunda parte do Formulario, O Formulario do Caso, Preencher conforme o problema em questão!."
+
+    tituloTag.textContent = "Utilizar a Tag:"
+    nomeTag.textContent = "CM_Venda_Relatórios_Subida de Vendas_Webclient"
+    tituloCategorizacao.textContent = "Categorização:"
+  }
+})
+
+haqImpressao.addEventListener("change", () => {
+  if (haqImpressao.checked) {
+    relatado.value = `Franqueada(o) informa que ao tentar finalizar venda no Mobshop(PDX) da erro e apresenta a MSG : Erro de impressão.`
+
+    executado.value = `Acessado o PDV da loja, Aberto o CMD e utilizado o comando 'services.msc' para abrir os Serviços, Localizado o Serviço 'HAQ' e Parado e Iniciado novamente.
+
+Na sequência solicitado a franqueada para reiniciar o aparelho(Mobshop), Após reiniciar solicitado para logar no Mobshop e foi feito uma Carga Total, Após procedimentos efetuado um teste e a venda foi emitida e o cupom impresso com sucesso.`
+
+    solucao.value = `Acessado o PDV da loja, Reiniciado o serviço HAQ, e reiniciado o Mobshop, Feito uma Carga total, efetuado um teste e a venda foi efetuada e impressa com sucesso..`
+
+    artigo.value = "000008753"
+
+    container4.appendChild(tituloTag)
+    container4.appendChild(nomeTag)
+    container4.appendChild(tituloCategorizacao)
+    container4.appendChild(olCategorizacao)
+
+    olCategorizacao.classList.add("ol-categorizacao")
+
+    const listaOrdenadaCategorizacao =
+      document.querySelector(".ol-categorizacao")
+
+    listaOrdenadaCategorizacao.appendChild(li1)
+    li1.textContent = "Venda"
+    listaOrdenadaCategorizacao.appendChild(li2)
+    li2.textContent = "Inicializar sistemas e dispositivos"
+    listaOrdenadaCategorizacao.appendChild(li3)
+    li3.textContent =
+      "A Segunda parte do Formulario, O Formulario do Caso, Preencher conforme o problema em questão!."
+
+    tituloTag.textContent = "Utilizar a Tag:"
+    nomeTag.textContent = "CM_Venda_Sistemas_PDx_Bug"
+    tituloCategorizacao.textContent = "Categorização:"
   }
 })
 
@@ -288,13 +528,13 @@ ${solucao.value}
 
 ${tituloApoio} ${inputApoio}
 
-Numero do Artigo: ${artigo.value}
+Número do Artigo: ${artigo.value}
     
 Premissas:
 Nome: ${nome.value}
 Código da Loja: ${loja.value}
 CP: cp${cp.value}.varejofacil.com
 Contato: ${contato.value}
-Email: ${email.value}
-Horario de Atendimento : Segunda a Sexta: ${horarioSegSexta.value} Sabado: ${horarioSab.value} Domingo: ${horarioDom.value}`)
+E-mail: ${email.value}
+Horário de Atendimento : Segunda a Sexta: ${horarioSegSexta.value} Sábado: ${horarioSab.value} Domingo: ${horarioDom.value}`)
 }

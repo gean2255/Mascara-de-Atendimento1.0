@@ -16,6 +16,8 @@ img {
   display: flex;
   flex-direction: column;
   align-items: center;
+  border-radius: 3px;
+  border: 3px solid #a7a7a7;
 }
 
 .contact-form label {
@@ -259,23 +261,36 @@ fieldset {
 .container-geral {
   display: grid;
   grid-template-columns: 1fr 2fr 4fr 2fr;
+  border-radius: 3px;
 }
 
 .container-1 {
   display: flex;
   align-items: center;
+  background-color: #328dc8;
+  border-radius: 3px;
+  border: 3px solid #01558e;
 }
 
 .container-2 {
   display: flex;
   flex-direction: column;
   align-items: center;
+  border-radius: 3px;
+}
+
+.container-4 {
+  background-color: #ea7727;
+  border-radius: 3px;
+  border: 3px solid #9e4606;
 }
 
 .rapido {
-  background-color: #ff6384;
+  background-color: #b4d133;
   width: 100%;
   height: 100%;
+  border-radius: 3px;
+  border: 3px solid #7a9505;
 }
 
 .rapido input {
@@ -283,9 +298,22 @@ fieldset {
   justify-content: center;
 }
 
+.rapido input,
+label {
+  cursor: pointer;
+}
+
+.preenchimentoRapido:hover {
+  background-color: #ea7727;
+}
+
 .preenchimentoRapido {
   display: flex;
   margin-top: 10px;
+  border: 1px solid black;
+  background-color: orange;
+  border-radius: 3px;
+  transition: 0.5s;
 }
 
 .container-email-e-horario label {

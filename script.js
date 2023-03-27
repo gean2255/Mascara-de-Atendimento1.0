@@ -504,7 +504,7 @@ Na Sequencia acessado a Rotina: Frente de loja > Sincronização > Lojas, e Feit
 
     solucao.value = `Feito uma carga de produtos para o PDV para descer as informações da tributação, efetuado um teste, Informações integradas com sucesso no PDV.`
 
-    artigo.value = "Não Encontrado."
+    artigo.value = "000008643 Tópico 4.1.1"
 
     container4.appendChild(tituloTag)
     container4.appendChild(nomeTag)

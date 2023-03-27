@@ -52,6 +52,7 @@ const prodForaDeLinha = document.getElementById("prodForaDeLinha")
 const pedidoOmniNDesce = document.getElementById("pedidoOmniNDesce")
 const lojaOffline = document.getElementById("lojaOffline")
 const haqImpressao = document.getElementById("haqImpressao")
+const tribuNCadast = document.getElementById("tribuNCadast")
 
 const container4 = document.querySelector(".container-4")
 
@@ -487,6 +488,44 @@ Na sequência solicitado a franqueada para reiniciar o aparelho(Mobshop), Após 
 
     tituloTag.textContent = "Utilizar a Tag:"
     nomeTag.textContent = "CM_Venda_Sistemas_PDx_Bug"
+    tituloCategorizacao.textContent = "Categorização:"
+  }
+})
+
+tribuNCadast.addEventListener("change", () => {
+  if (tribuNCadast.checked) {
+    relatado.value = `Franqueada(o) informa que ao tentar finalizar venda no Mobshop(PDX) da erro e apresenta a MSG : Erro de impressão.`
+
+    executado.value = `Acessado o CP da loja, indo na rotina : Produto > Cadastro > Produto, e consultado o(os) itens em questão, constatado que os campos de tributação na Aba Imposto estão devidamente cadastrados, Salvado então o cadastro do produto para que seja gerado uma pendencia de sincronização.
+
+Foi verificado que a CP não estava listada no artigo 8722, que são CPs com carga automática via Sync.
+
+Na Sequencia acessado a Rotina: Frente de loja > Sincronização > Lojas, e Feito uma carga dos produtos para o PDV, efetuado um teste e agora é possível incluir o produto no PDV normalmente.`
+
+    solucao.value = `Feito uma carga de produtos para o PDV para descer as informações da tributação, efetuado um teste, Informações integradas com sucesso no PDV.`
+
+    artigo.value = "Não Encontrado."
+
+    container4.appendChild(tituloTag)
+    container4.appendChild(nomeTag)
+    container4.appendChild(tituloCategorizacao)
+    container4.appendChild(olCategorizacao)
+
+    olCategorizacao.classList.add("ol-categorizacao")
+
+    const listaOrdenadaCategorizacao =
+      document.querySelector(".ol-categorizacao")
+
+    listaOrdenadaCategorizacao.appendChild(li1)
+    li1.textContent = "Venda"
+    listaOrdenadaCategorizacao.appendChild(li2)
+    li2.textContent = "Incluir produto"
+    listaOrdenadaCategorizacao.appendChild(li3)
+    li3.textContent =
+      "A Segunda parte do Formulario, O Formulario do Caso, Preencher conforme o problema em questão!."
+
+    tituloTag.textContent = "Utilizar a Tag:"
+    nomeTag.textContent = "CM_Venda_Incluir Produto_Produto_Sem tributação"
     tituloCategorizacao.textContent = "Categorização:"
   }
 })

@@ -345,9 +345,9 @@ Na Sequencia acessado a Rotina : Frente de loja > Sincronização > Loja, Seleci
 
 prodPrecoZero.addEventListener("change", () => {
   if (prodPrecoZero.checked) {
-    relatado.value = `Franqueada informa que ao tentar incluir Produto X está apresentando o Erro: Preço com preço zero.`
+    relatado.value = `Franqueada informa que ao tentar incluir Produto X está apresentando o Erro: Produto com preço zero.`
 
-    executado.value = `Primeiramente consultado o produto em questão no presto e na Bíblia para saber se o produto está Vigente no Ciclo.
+    executado.value = `Primeiramente consultado o produto em questão no presto e na Bíblia para saber se o produto está Vigente no Ciclo e Também Foi verificado que a CP não estava listada no artigo 8722, que são CPs com carga automática via Sync.
 
 Na sequência acessado o CP da loja, Indo na Rotina: Produto > Cadastro > Produto, Consultado o produto em Questão e indo na Aba Preço verificado que o preço consta normalmente no produto, Indo na Aba Imposto verificado que todos os campos estão devidamente preenchidos, Clicado então em Gravar para gerar uma pendencia do item na sincronização.
 

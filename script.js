@@ -91,7 +91,7 @@ form.addEventListener("submit", (event) => {
 })
 
 cp.addEventListener("keyup", () => {
-  outputCp.textContent = `cp${cp.value}.varejofacil.com.br`
+  outputCp.textContent = `cp${cp.value}.varejofacil.com`
 })
 
 const ativar = () => {

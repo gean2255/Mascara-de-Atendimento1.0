@@ -494,7 +494,7 @@ Na sequência solicitado a franqueada para reiniciar o aparelho(Mobshop), Após 
 
 tribuNCadast.addEventListener("change", () => {
   if (tribuNCadast.checked) {
-    relatado.value = `Franqueada(o) informa que ao tentar finalizar venda no Mobshop(PDX) da erro e apresenta a MSG : Erro de impressão.`
+    relatado.value = `Franqueada(o) informa que ao tentar inlcuir produto no PDV é retornado o erro : Tributação Não Cadastrada.`
 
     executado.value = `Acessado o CP da loja, indo na rotina : Produto > Cadastro > Produto, e consultado o(os) itens em questão, constatado que os campos de tributação na Aba Imposto estão devidamente cadastrados, Salvado então o cadastro do produto para que seja gerado uma pendencia de sincronização.
 

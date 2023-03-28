@@ -36,18 +36,21 @@ img {
 #relatado {
   resize: vertical;
   height: 35px;
+  min-height: 35px;
   width: 505px;
 }
 
 #executado {
   resize: vertical;
   height: 90px;
+  min-height: 95px;
   width: 505px;
 }
 
 #solucao {
   resize: vertical;
   height: 35px;
+  min-height: 35px;
   width: 505px;
   margin: 0;
 }

@@ -8,18 +8,6 @@ img {
   border-radius: 50%;
 }
 
-.contact-form {
-  background-color: #f2f2f2;
-  padding: 10px;
-  border-radius: 10px;
-  width: 600px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  border-radius: 3px;
-  border: 3px solid #a7a7a7;
-}
-
 .contact-form label {
   color: black;
 }
@@ -46,19 +34,19 @@ img {
 /* Textarea*/
 
 #relatado {
-  resize: none;
+  resize: vertical;
   height: 35px;
   width: 505px;
 }
 
 #executado {
-  resize: none;
+  resize: vertical;
   height: 90px;
   width: 505px;
 }
 
 #solucao {
-  resize: none;
+  resize: vertical;
   height: 35px;
   width: 505px;
   margin: 0;
@@ -258,6 +246,8 @@ fieldset {
   }
 }
 
+/* Containers Inicio */
+
 .container-geral {
   display: grid;
   grid-template-columns: 1fr 2fr 4fr 2fr;
@@ -266,10 +256,14 @@ fieldset {
 
 .container-1 {
   display: flex;
-  align-items: center;
+  /* align-items: center; */
   background-color: #328dc8;
   border-radius: 3px;
   border: 3px solid #01558e;
+}
+
+.container-1 fieldset {
+  padding: 5px;
 }
 
 .container-2 {
@@ -279,11 +273,23 @@ fieldset {
   border-radius: 3px;
 }
 
+.container-3 {
+  padding: 10px;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-radius: 3px;
+  border: 3px solid #a7a7a7;
+}
+
 .container-4 {
   background-color: #ea7727;
   border-radius: 3px;
   border: 3px solid #9e4606;
 }
+
+/* Containers Fim */
 
 .rapido {
   background-color: #b4d133;

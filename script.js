@@ -189,9 +189,12 @@ wifiPdx.addEventListener("change", () => {
   }
 })
 
+// Estilização Container 4
+
 tituloTag.style.backgroundColor = "orange"
 tituloTag.style.borderRadius = "3px"
 nomeTag.style.border = "3px solid black"
+nomeTag.style.padding = "5px"
 tituloCategorizacao.style.backgroundColor = "orange"
 tituloCategorizacao.style.borderRadius = "3px"
 olCategorizacao.style.border = "3px solid black"
